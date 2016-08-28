@@ -1,0 +1,23 @@
+{
+  "name": "Erik/port-manager",
+  "description": "A small port manager for Mikrotik routers.",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Erik Horvath",
+      "email": "horvatherik3@gmail.com"
+    }
+  ],
+  "require": {
+    "smarty/smarty": "v3.1.29",
+    "pear2/net_routeros": "1.0.0b5"
+  },
+  "autoload": {
+    "files": [
+      "core/config.php",
+      "core/init.php",
+      "core/login-user.php"
+    ]
+  }
+}

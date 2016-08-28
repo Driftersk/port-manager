@@ -1,0 +1,12 @@
+ADD MAIN RULE:
+ip firewall nat add chain=dstnat dst-address=192.168.0.100 protocol=tcp dst-port=666 dst-address-type=local action=dst-nat to-addresses=192.168.0.66 to-ports=666 comment=PORTS:MAIN:test
+
+ADD HAIRPIN RULE:
+ip firewall nat add chain=srcnat src-address=192.168.0.0/24 dst-address=192.168.0.10 protocol=tcp dst-port=666 out-interface=bridge-local action=masquerade comment=PORTS:HAIRPIN:test
+
+REMOVE:
+ip firewall nat remove [find comment="PORTS:MAIN:test"]
+ip firewall nat remove [find comment="PORTS:HAIRPIN:test"]
+
+CHANGE:
+ip firewall nat set [find comment="PORTS:MAIN:test"] disabled=yes

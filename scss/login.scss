@@ -1,0 +1,99 @@
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(top, #35537a 0%,#1d2d44 100%);
+  background: linear-gradient(top, #35537a 0%,#1d2d44 100%);
+}
+
+#wrapper {
+  min-height: 100%;
+  margin: 0 auto -70px;
+  width: 300px;
+}
+
+header {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.v-align {
+  width: inherit;
+}
+
+form {
+  position: relative;
+  width: 280px;
+  margin: 32px auto;
+  padding: 0;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  text-align: left;
+
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  cursor: default;
+}
+
+input[type="text"], #body-login input[type="password"], #body-login input[type="email"] {
+  border: none;
+  font-weight: 300;
+}
+
+input {
+  font-size: 20px;
+  margin: 5px;
+  padding: 11px 10px 9px;
+}
+
+label.infield {
+  display: none;
+}
+
+#submit.login {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  background-color: transparent;
+  opacity: .3;
+}
+
+#submit.login:hover, #submit.login:focus {
+  opacity: .7;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+}
+
+input[type="text"], #body-login input[type="password"], #body-login input[type="email"] {
+  border: none;
+  font-weight: 300;
+}
+
+input.login {
+  width: auto;
+  float: right;
+}
+
+.icon-confirm {
+  background-image: url('../imgs/confirm.svg');
+  background-size: cover;
+}
+
+#error {
+  color: red;
+  font-size: 1.5em;
+  text-align: center;
+}
